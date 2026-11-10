@@ -1,2 +1,2 @@
-# Wikipedia-Userstyle
-A custom userstyle for Wikipedia!
+# idk tbh
+idk tbh
