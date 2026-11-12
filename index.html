@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tiny5+Duo:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+</head>
+<body>
+  <h1 class="tiny5-duo-font centered bobby">Cool Website</h1>
+  
+  <a href="https://github.com/koolind13" class="surface1" style="margin: 0 auto; height: 50px; width: 150px; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; box-sizing: border-box;">
+    <img src="github.svg" alt="GitHub" width="35" height="35">
+    <span class="bobby tiny5-duo-font" style="font-size: 1.25rem;">GitHub</span>
+  </a>
+  <br>
+  <a href="https://youtube.com/@koolind13" class="surface1" style="margin: 0 auto; height: 50px; width: 175px; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; box-sizing: border-box;">
+    <img src="youtube.svg" alt="Youtube" width="35" height="35">
+    <span class="bobby tiny5-duo-font" style="font-size: 1.25rem;">Youtube</span>
+  </a>
+
+  <script>
+  const elements = document.querySelectorAll('.bobby'); //search for class bobby
+
+  for (const el of elements) { //run one by one for each element
+    const text = el.textContent; //store text in here
+    let newHTML = ''; //create a new container for the modified text
+
+    for (let i = 0; i < text.length; i++) { //run for the length of the text
+      let char = text[i]; //grab the current letter based on the loop
+
+      if (char === ' ') { //if text is space
+        char = '&nbsp;'; //make sure the space is still there
+      }
+
+      newHTML += `<span style="--i:${i}">${char}</span>`; //put text in span and add to newHTML
+    }
+
+    el.innerHTML = newHTML;
+  }
+  </script>
+</body>
+</html>
